@@ -1662,6 +1662,16 @@
 	premium = list(/obj/item/clothing/gloves/color/yellow = 1)
 	armor = list(melee = 100, bullet = 100, laser = 100, energy = 100, bomb = 0, bio = 0, rad = 0, fire = 100, acid = 70)
 	resistance_flags = FIRE_PROOF
+	refill_canister = /obj/item/vending_refill/tool
+
+/obj/machinery/vending/tool/Initialize(mapload)
+	component_parts = list()
+	var/obj/item/circuitboard/vendor/V = new(null)
+	V.set_type(type)
+	component_parts += V
+	component_parts += new /obj/item/vending_refill/tool(null)
+	RefreshParts()
+	return ..()
 
 /obj/machinery/vending/engivend
 	name = "\improper Engi-Vend"
@@ -1973,6 +1983,16 @@
 	/obj/item/pen/red = 5)
 	contraband = list(/obj/item/toy/crayon/mime = 1,/obj/item/toy/crayon/rainbow = 1)
 	premium = list(/obj/item/poster/random_contraband = 5)
+	refill_canister = /obj/item/vending_refill/artvend
+
+/obj/machinery/vending/artvend/Initialize(mapload)
+	component_parts = list()
+	var/obj/item/circuitboard/vendor/V = new(null)
+	V.set_type(type)
+	component_parts += V
+	component_parts += new /obj/item/vending_refill/artvend(null)
+	RefreshParts()
+	return ..()
 
 /obj/machinery/vending/crittercare
 	name = "\improper CritterCare"

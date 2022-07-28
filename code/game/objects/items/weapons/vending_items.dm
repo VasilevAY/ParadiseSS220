@@ -100,7 +100,7 @@
 
 /obj/item/vending_refill/assist
 	machine_name = "Vendomat"
-	icon_state = "refill_engi"
+	icon_state = "refill_custom"
 
 /obj/item/vending_refill/cart
 	machine_name = "PTech"
@@ -147,4 +147,12 @@
 
 /obj/item/vending_refill/robotics
 	machine_name = "Robotech Deluxe"
+	icon_state = "refill_engi"
+
+/obj/item/vending_refill/artvend
+	machine_name = "ArtVend"
+	icon_state = "refill_art"
+
+/obj/item/vending_refill/tool
+	machine_name = "TouTool"
 	icon_state = "refill_engi"
