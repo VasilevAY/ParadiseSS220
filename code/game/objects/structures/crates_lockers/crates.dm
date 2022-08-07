@@ -377,6 +377,20 @@
 		return
 	default_unfasten_wrench(user, I, 40)
 
+/obj/structure/closet/crate/can/welder_act(mob/user, obj/item/I)
+	if(anchored == TRUE)
+		return
+	. = TRUE
+	if(!I.tool_use_check(user, 0))
+		return
+	WELDER_ATTEMPT_SLICING_MESSAGE
+	if(I.use_tool(src, user, 60, volume = I.tool_volume))
+		WELDER_SLICING_SUCCESS_MESSAGE
+		var/obj/item/stack/sheet/plastic/P = new(drop_location())
+		P.amount = 7
+		P.add_fingerprint(user)
+		qdel(src)
+
 /obj/structure/closet/crate/radiation
 	desc = "A crate with a radiation sign on it."
 	name = "radioactive gear crate"
