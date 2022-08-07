@@ -252,3 +252,14 @@
 	materials = list(MAT_METAL=500)
 	build_path = /obj/item/spacepod_key
 	category = list("Pod_Parts")
+
+/datum/design/lock_buster
+	construction_time = 100
+	name = "pod lock buster"
+	desc = "Destroys a podlock in mere seconds once applied. Waranty void if used."
+	id = "lock_buster"
+	req_tech = list("materials" = 2) //The most basic kind of locking system
+	build_type = PODFAB
+	materials = list(MAT_METAL=1000)
+	build_path = /obj/item/lock_buster
+	category = list("Pod_Parts")
