@@ -24,7 +24,6 @@
 	var/projectile_type = /obj/item/projectile/beam/emitter
 	var/projectile_sound = 'sound/weapons/emitter.ogg'
 	var/datum/effect_system/spark_spread/sparks
-	var/datum/multitool_menu/emitter/multitool_menu
 
 /obj/machinery/power/emitter/Initialize(mapload)
 	. = ..()
@@ -38,7 +37,6 @@
 	sparks = new
 	sparks.attach(src)
 	sparks.set_up(5, 1, src)
-	multitool_menu = new(src)
 
 /obj/machinery/power/emitter/RefreshParts()
 	var/max_firedelay = 120
@@ -80,7 +78,6 @@
 	log_game("Emitter deleted at ([x],[y],[z])")
 	investigate_log("<font color='red'>deleted</font> at ([x],[y],[z]) [usr ? "Broken by [key_name(usr)]" : ""]","singulo")
 	QDEL_NULL(sparks)
-	QDEL_NULL(multitool_menu)
 	return ..()
 
 /obj/machinery/power/emitter/update_icon()
@@ -212,11 +209,6 @@
 	return P
 
 /obj/machinery/power/emitter/attackby(obj/item/W, mob/user, params)
-	if(istype(W, /obj/item/multitool))
-		//update_multitool_menu(user)
-		multitool_menu.interact(user, W)
-		return 1
-
 	if(istype(W, /obj/item/wrench))
 		if(active)
 			to_chat(user, "Turn off the [src] first.")

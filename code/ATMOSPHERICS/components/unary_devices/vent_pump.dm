@@ -40,7 +40,7 @@
 	var/weld_burst_pressure = 50 * ONE_ATMOSPHERE	//the (internal) pressure at which welded covers will burst off
 
 	frequency = ATMOS_VENTSCRUB
-	Mtoollink = 1
+	//Mtoollink = 1 //DDEL
 
 	var/radio_filter_out
 	var/radio_filter_in
@@ -67,6 +67,9 @@
 	if(!id_tag)
 		assign_uid()
 		id_tag = num2text(uid)
+
+/obj/machinery/atmospherics/unary/vent_pump/init_multitool_menu()
+	multitool_menu = new /datum/multitool_menu/idtag/freq/vent_pump(src)
 
 /obj/machinery/atmospherics/unary/vent_pump/high_volume
 	name = "large air vent"
@@ -357,7 +360,8 @@
 			to_chat(user, "The vent is welded.")
 		return 1
 	if(istype(W, /obj/item/multitool))
-		update_multitool_menu(user)
+		//update_multitool_menu(user) //DDEL
+		multitool_menu.interact(user, W)
 		return 1
 	if(istype(W, /obj/item/wrench))
 		if(!(stat & NOPOWER) && on)
@@ -403,7 +407,7 @@
 	if(old_stat != stat)
 		update_icon()
 
-
+/* DDEL
 /obj/machinery/atmospherics/unary/vent_pump/interact(mob/user as mob)
 	update_multitool_menu(user)
 
@@ -430,6 +434,16 @@
 		return TRUE
 
 	return ..()
+*/
+obj/machinery/atmospherics/unary/vent_pump/proc/set_tag(new_tag)
+	if(!new_tag)
+		visible_message("<span class='warning'>The ID tag of [src] cannot be null.</span>")
+		return
+	if(frequency == ATMOS_VENTSCRUB)
+		initial_loc.air_vent_info -= id_tag
+		initial_loc.air_vent_names -= id_tag
+	id_tag = new_tag
+	broadcast_status()
 
 /obj/machinery/atmospherics/unary/vent_pump/Destroy()
 	GLOB.all_vent_pumps -= src
