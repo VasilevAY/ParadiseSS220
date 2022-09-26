@@ -176,6 +176,21 @@
 	var/locid = 0
 	var/laststart = 1
 	var/textindex = 1
+
+	while(locid <= MAX_PAPER_FIELDS)
+		var/istart = 0
+		istart = findtext(header, "<span class=\"paper_field\">", laststart )
+
+		if(istart==0)
+			return
+		laststart = istart+1
+		locid++
+		if(locid == id)
+			var/iend = 1
+			if(links)
+				iend = findtext(header, "</span>", istart)
+			textindex = iend
+
 	while(locid <= MAX_PAPER_FIELDS)
 		var/istart = 0
 		if(links)
@@ -816,7 +831,7 @@
 	var/altername // alternative form name
 	var/category // category name
 	var/confidential = FALSE
-	var/from // = "Научная станция Nanotrasen &#34;Cyberiad&#34;"
+	var/from // = "ИСН &#34;Cyberiad&#34;"
 	var/notice = "Перед заполнением прочтите от начала до конца | Во всех PDA имеется ручка"
 	var/access = null //form visible only with appropriate access
 	paper_width = 600 //Width of the window that opens
@@ -828,11 +843,20 @@
 	footer = footer_signstampfax
 
 /obj/item/paper/form/New()
-	from = "Научная станция Nanotrasen &#34;[MAP_NAME]&#34;"
+	from = "ИСН &#34;[MAP_NAME]&#34;"
 	if(is_header_needed)
-		header = "<font face=\"Verdana\" color=black><table></td><tr><td><img src = ntlogo.png><td><table></td><tr><td><font size = \"1\">[name][confidential ? " \[КОНФИДЕНЦИАЛЬНО\]" : ""]</font></td><tr><td></td><tr><td><B><font size=\"4\">[altername]</font></B></td><tr><td><table></td><tr><td>[from]<td>[category]</td></tr></table></td></tr></table></td></tr></table><center><font size = \"1\">[notice]</font></center><BR><HR><BR></font>"
+		header = "<font face=\"Verdana\" color=black><table><tr><td><img src = ntlogo.png></td><td><table><font size = \"1\"><td>[name][confidential ? " \[КОНФИДЕНЦИАЛЬНО\]" : ""]</td></font><tr><td>[from]</td></tr><tr><td>Дата: [GLOB.current_date_string]</td></tr><tr><td>Время: </td><td><span class=\"paper_field\"></span></td></tr><tr><td><B>[altername]</B></td></tr></table></td></tr></table>"
 	populatefields()
 	return ..()
+
+
+//тестовая форма
+/obj/item/paper/form/NT_COM_TEST
+	name = "Форма NT-COM-TEST"
+	id = "NT-COM-TEST"
+	altername = "TEST1"
+	category = "TEST2"
+	footer = null
 
 //главы станции
 /obj/item/paper/form/NT_COM_ST
