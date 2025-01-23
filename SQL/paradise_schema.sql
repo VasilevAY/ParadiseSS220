@@ -652,3 +652,11 @@ CREATE TABLE `budget`
 	PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+CREATE TABLE IF NOT EXISTS player_achievements (
+    id SERIAL PRIMARY KEY,
+    player_id VARCHAR(50) NOT NULL,
+    achievement_id VARCHAR(50) NOT NULL,
+    date_earned TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (player_id, achievement_id)
+);
