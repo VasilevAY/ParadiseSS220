@@ -58,6 +58,9 @@
 #define JOB_FLAG_EXPLORER			(1<<14)
 #define JOB_FLAG_MINING_MEDIC		(1<<15)
 #define JOB_FLAG_PRISONER			(1<<16)
+#define JOB_FLAG_TEAM1				(1<<17)
+#define JOB_FLAG_TEAM2				(1<<18)
+#define JOB_FLAG_TEAM3				(1<<19)
 
 #define JOBCAT_KARMA				(1<<3) // DELETE THIS SHIT!!!
 

@@ -29,11 +29,11 @@
 		JOB_TITLE_PRISONER = "radio",
 		JOB_TITLE_TEAM1 = "radio",
 		JOB_TITLE_TEAM2 = "radio",
-		JOB_TITLE_TEAM3 = "radio"
+		JOB_TITLE_TEAM3 = "radio",
 		//Teams radio
 		JOB_TITLE_TEAM1 = "t1radio",
 		JOB_TITLE_TEAM2 = "t2radio",
-		JOB_TITLE_TEAM3 = "t3radio"
+		JOB_TITLE_TEAM3 = "t3radio",
 		// Command (Solo command, not department heads)
 		JOB_TITLE_BLUESHIELD = "comradio",
 		JOB_TITLE_CAPTAIN = "comradio",

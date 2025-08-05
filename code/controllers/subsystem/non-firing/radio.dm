@@ -27,11 +27,10 @@ SUBSYSTEM_DEF(radio)
 	"Клан Паука"			= NINJA_FREQ,
 	"Альфа частота"			= EVENT_ALPHA_FREQ,
 	"Бета частота"			= EVENT_BETA_FREQ,
-	"Гамма частота"			= EVENT_GAMMA_FREQ
-	"Команда 1"				= T1_FREQ
-	"Команда 2"				= T2_FREQ
+	"Гамма частота"			= EVENT_GAMMA_FREQ,
+	"Команда 1"				= T1_FREQ,
+	"Команда 2"				= T2_FREQ,
 	"Команда 3"				= T3_FREQ
-
 	)
 	var/list/CENT_FREQS = list(ERT_FREQ, DTH_FREQ)
 	var/list/ANTAG_FREQS = list(SYND_FREQ, SYNDTEAM_FREQ, SYND_TAIPAN_FREQ)
