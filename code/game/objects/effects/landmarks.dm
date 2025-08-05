@@ -319,6 +319,18 @@
 	name = JOB_TITLE_PRISONER
 	icon_state = "Prisoner"
 
+/obj/effect/landmark/start/team1
+	name = JOB_TITLE_TEAM1
+	icon_state = "TEAM1"
+
+/obj/effect/landmark/start/team2
+	name = JOB_TITLE_TEAM2
+	icon_state = "TEAM2"
+
+/obj/effect/landmark/start/team3
+	name = JOB_TITLE_TEAM3
+	icon_state = "TEAM3"
+
 /obj/effect/landmark/start/chief_engineer
 	name = JOB_TITLE_CHIEF
 	icon_state = "CE"

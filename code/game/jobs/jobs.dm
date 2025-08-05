@@ -100,7 +100,10 @@ GLOBAL_LIST_INIT(service_positions, (support_positions - supply_positions))
 
 GLOBAL_LIST_INIT(civilian_positions, list(
 	JOB_TITLE_CIVILIAN,
-	JOB_TITLE_PRISONER
+	JOB_TITLE_PRISONER,
+	JOB_TITLE_TEAM1,
+	JOB_TITLE_TEAM2,
+	JOB_TITLE_TEAM3
 ))
 
 GLOBAL_LIST_INIT(nonhuman_positions, list(

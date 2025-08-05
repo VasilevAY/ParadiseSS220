@@ -78,6 +78,9 @@
 // Assistant
 #define JOB_TITLE_CIVILIAN				"Civilian"
 #define JOB_TITLE_PRISONER				"Prisoner"
+#define JOB_TITLE_TEAM1					"Team 1"
+#define JOB_TITLE_TEAM2					"Team 2"
+#define JOB_TITLE_TEAM3					"Team 3"
 
 // Command (Solo command, not department heads)
 #define JOB_TITLE_CAPTAIN				"Captain"
