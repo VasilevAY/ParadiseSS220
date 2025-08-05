@@ -674,7 +674,6 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 
 	return TRUE
 
-
 /datum/objective/escape/escape_with_identity
 	name = "Escape With Identity"
 	antag_menu_name = "Эвакуироваться под личностью"

@@ -40,6 +40,9 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	  ":u" = SUP_FREQ_NAME,				"#u" = SUP_FREQ_NAME,			"№u" = SUP_FREQ_NAME,			".u" = SUP_FREQ_NAME,
 	  ":z" = SRV_FREQ_NAME,				"#z" = SRV_FREQ_NAME,			"№z" = SRV_FREQ_NAME,			".z" = SRV_FREQ_NAME,
 	  ":p" = AI_FREQ_NAME,				"#p" = AI_FREQ_NAME,			"№p" = AI_FREQ_NAME,			".p" = AI_FREQ_NAME,
+	  ":t1" = T1_FREQ_NAME,				"#t1" = T1_FREQ_NAME,			"№t1" = T1_FREQ_NAME,			".t1" = T1_FREQ_NAME,
+	  ":t2" = T1_FREQ_NAME,				"#t2" = T1_FREQ_NAME,			"№t2" = T1_FREQ_NAME,			".t2" = T1_FREQ_NAME,
+	  ":t3" = T1_FREQ_NAME,				"#t3" = T1_FREQ_NAME,			"№t3" = T1_FREQ_NAME,			".t3" = T1_FREQ_NAME,
 
 	// English text uppercase
 	  ":R" = R_EAR_MODE,				"#R" = R_EAR_MODE,				"№R" = R_EAR_MODE,				".R" = R_EAR_MODE,
@@ -59,6 +62,9 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	  ":Z" = SRV_FREQ_NAME,				"#Z" = SRV_FREQ_NAME,			"№Z" = SRV_FREQ_NAME,			".Z" = SRV_FREQ_NAME,
 	  ":P" = AI_FREQ_NAME,				"#P" = AI_FREQ_NAME,			"№P" = AI_FREQ_NAME,			".P" = AI_FREQ_NAME,
 	  ":." = PRS_FREQ_NAME,				"#." = PRS_FREQ_NAME,			"№." = PRS_FREQ_NAME,			".." = PRS_FREQ_NAME,
+	  ":T1" = T1_FREQ_NAME,				"#T1" = T1_FREQ_NAME,			"№T1" = T1_FREQ_NAME,			".T1" = T1_FREQ_NAME,
+	  ":T2" = T1_FREQ_NAME,				"#T2" = T1_FREQ_NAME,			"№T2" = T1_FREQ_NAME,			".T2" = T1_FREQ_NAME,
+	  ":T3" = T1_FREQ_NAME,				"#T3" = T1_FREQ_NAME,			"№T3" = T1_FREQ_NAME,			".T3" = T1_FREQ_NAME,
 
 	// Russian text lowercase
 	  ":к" = R_EAR_MODE,				"#к" = R_EAR_MODE,				"№к" = R_EAR_MODE,				".к" = R_EAR_MODE,

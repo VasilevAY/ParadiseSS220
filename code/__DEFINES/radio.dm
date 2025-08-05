@@ -102,6 +102,9 @@
 #define EVENT_ALPHA_FREQ_NAME "Альфа частота"
 #define EVENT_BETA_FREQ_NAME "Бета частота"
 #define EVENT_GAMMA_FRE_NAME "Гамма частота"
+#define T1_FREQ_NAME "Команда 1"
+#define T2_FREQ_NAME "Команда 2"
+#define T3_FREQ_NAME "Команда 3"
 
 #define SPEC_FREQ_NAME "Cпециальный"
 #define DEPARTMENT_FREQ_NAME "Отдел"
